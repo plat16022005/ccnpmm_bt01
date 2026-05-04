@@ -1,0 +1,22 @@
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+    const User = sequelize.define('User', {
+        email: DataTypes.STRING,
+        password: DataTypes.STRING,
+        firstName: DataTypes.STRING,
+        lastName: DataTypes.STRING,
+        address: DataTypes.STRING,
+        phoneNumber: DataTypes.STRING,
+        gender: DataTypes.BOOLEAN,
+        image: DataTypes.STRING,
+        roleId: DataTypes.STRING,
+        positionId: DataTypes.STRING
+    }, {});
+
+    User.associate = function(models) {
+        // associations can be defined here
+    };
+
+    return User;
+};

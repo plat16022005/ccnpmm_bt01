@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update user</title>
+</head>
+<body>
+
+    <form action="/put-crud" method="POST">
+
+        <input type="hidden" name="id" value="<%= data.id %>">
+
+        <label>First name:</label><br>
+        <input type="text" name="firstName" value="<%= data.firstName %>"><br><br>
+
+        <label>Last name:</label><br>
+        <input type="text" name="lastName" value="<%= data.lastName %>"><br><br>
+
+        <label>Address:</label><br>
+        <input type="text" name="address" value="<%= data.address %>"><br><br>
+
+        <button type="submit">Update</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display all users</title>
+</head>
+<body>
+
+    <table width="100%" border="1px solid black">
+        <tr>
+            <th>Email</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+
+        <% datalist.forEach(function(item,index){ %>
+            <tr>
+                <td><%= item.email %></td>
+                <td><%= item.firstName %></td>
+                <td><%= item.lastName %></td>
+                <td><%= item.address %></td>
+                <td>
+                    <a href="/edit-crud?id=<%= item.id %>">Edit</a>
+                    <a href="/delete-crud?id=<%= item.id %>">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+
+    </table>
+
+</body>
+</html>
